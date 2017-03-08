@@ -1,0 +1,16 @@
+
+<div class="container">
+  	<div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+<h1>お問い合わせ 履歴</h1>
+
+<% @contacts.each do |contact| %>
+    <p>名前:<%= contact.name %></p>
+    <p>メールアドレス:<%= contact.email %></p>
+    <p>お問い合わせ内容:<%= contact.content %></p>
+<% end %>
+
+<p><%= link_to "新規お問い合わせする" , new_contact_path, class: 'btn btn-default' %></p>
+
+	</div>
+</div>
